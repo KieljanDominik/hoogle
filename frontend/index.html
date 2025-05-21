@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Kaushan+Script&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoogle Drive</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hoogle Drive</h1>
+            <button class="login-btn">Log in</button>
+        </header>
+        <div class="toolbar">
+            <button class="btn" onclick="clickInputElement()">
+                <input type="file" multiple id="file-input" style="display: none" onchange="uploadFile()"/>
+                <div class="btn-div">
+                    Add file
+                    <span class="material-symbols-outlined">
+                        upload
+                    </span>
+                </div>
+            </button>
+            <button class="btn">
+                <div class="btn-div">
+                    Add folder
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </div>
+            </button>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="files-list"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>
